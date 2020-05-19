@@ -39,7 +39,7 @@ To summarize the results:
 A sample of the results. I haven't programmatically analyzed them, but from my spot checks, they all appear to be like this. The middle column compares the output based on the input.
 
 ```sh
-> head results.ci-image.python2.7     > head results.ci-image.python3.9
+$ head results.ci-image.python2.7     $ head results.ci-image.python3.9
 A: 8866                            <  A: 8867
 a: 56458                           <  a: 56459
 aa: 29724                          =  aa: 29724
