@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os, random, sys
-mydir = os.path.dirname(__file__)
+mydir = os.path.dirname(os.path.abspath(__file__))
 r = random.Random()
 maxidx = None
 with open('{}/web2'.format(mydir)) as webdict:
