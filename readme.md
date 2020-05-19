@@ -1,6 +1,6 @@
 # Python random.Random .seed() method with version=1 does not reproduce Python 2.7 behavior
 
-When using the random.Random class, using the .seed() method with version=1 does not always reproduce the same results as the .seed() method did in Python 2.
+When using the `random.Random` class, using the `.seed()` method with `version=1` and then calling `.randrange()` does not always reproduce the same results as the `.seed()` method did in Python 2.
 
 From the docs, I did expect it to match Python 2, but on closer inspection, I can't tell whether I made a bad assumption or whether there is a bug in the module.
 
@@ -24,7 +24,7 @@ But the results I've spot checked sometimes do match the Python 2 results, and s
 
 I've included the following in this repo:
 
-1. A python script that calls the .seed() method with version=1 under Python 3, and without a version= argument under Python 2, and then .randrange(). It uses as a seed every word in a wordlist I happened to have in /usr/share/dict.
+1. A python script that calls the `.seed()` method with `version=1` under Python 3, and without a version= argument under Python 2, and then `.randrange(0, 65535, 1)`. It uses as a seed every word in a wordlist I happened to have in /usr/share/dict.
 1. A shell script that runs the script with the Python versions I happen to have installed locally, along with Python 2.7 and 3.4-3.9 in the ci-image Docker container linked from the Python download page.
 1. The results from each Python version
 
