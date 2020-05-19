@@ -1,3 +1,5 @@
+# Python random.Random .seed() method with version=1 does not reproduce Python 2.7 behavior
+
 When using the random.Random class, using the .seed() method with version=1 does not always reproduce the same results as the .seed() method did in Python 2.
 
 From the docs, I did expect this, but on closer inspection, I can't tell whether I made a bad assumption or whether there is a bug in the module.
